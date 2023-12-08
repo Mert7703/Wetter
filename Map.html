@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Map</title>
+    <!-- Add Leaflet CSS link -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Füge ein benutzerdefiniertes Stylesheet hinzu, um die Breite zu setzen */
+        #map {
+            width: 100%;
+            height: 400px; /* Du kannst die Höhe nach Bedarf anpassen */
+        }
+    </style>
+</head>
+<body>
+<!-- City Search Form -->
+<form id="cityForm" onsubmit="searchCity(event)">
+    <label for="cityNames">Enter City Names (comma-separated):</label>
+    <input type="text" id="cityNames" name="cities" required>
+    <button type="submit">Search</button>
+</form>
+
+<!-- Map Container -->
+<div id="map"></div>
+
+<!-- Add Leaflet JS link -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Add your app.js script -->
+<script src="app.js"></script>
+</body>
+</html>
